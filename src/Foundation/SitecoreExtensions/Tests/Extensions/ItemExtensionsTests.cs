@@ -13,7 +13,7 @@
   using Sitecore.Resources.Media;
   using Xunit;
 
-  public class ItemExtensionsTests
+    public class ItemExtensionsTests
   {
     [Theory]
     [AutoDbData]
@@ -32,7 +32,7 @@
       mediaItem.MediaUrl(template.FieldId).Should().NotBeNull();
       mediaItem.MediaUrl(template.FieldId).Should().BeEmpty();
     }
-
+        /*
     [Theory(Skip = "Extension method and entire call stack require service refactoring (#398)")]
     [AutoDbData]
     public void MediaUrlShoulReturnLink([Content] Db db, [Content] Item target, [Content] MediaTemplate template, string expectedUri)
@@ -63,6 +63,7 @@
 
     [Theory(Skip = "Extension method and entire call stack require service refactoring (#398)")]
     [AutoDbData]
+     
     public void MediaUrlShouldReturnEmptyStringWhenLinkIsBroken([Content] Db db, [Content] Item target, [Content] MediaTemplate template, string expectedUri)
     {
       var newID = ID.NewID;
@@ -87,7 +88,7 @@
         Database.GetDatabase("master").GetItem(newID).MediaUrl(template.FieldId).Should().Be("");
       }
     }
-
+    */
     [Theory]
     [AutoDbData]
     public void HasFieldValue_FieldHasValue_ShouldReturnTrue(Db db, DbItem item, DbField field, string value)
